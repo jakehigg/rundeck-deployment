@@ -1,0 +1,4 @@
+//# sourceMappingURL=project-model.js.map
+function ProjectAuth(a){this.jobCreate=ko.observable(!1);this.admin=ko.observable(!1);this.mapping={};a&&ko.mapping.fromJS(a,this.mapping,this)}function ProjectReadme(a){this.readmeHTML=ko.observable(null);this.motdHTML=ko.observable(null);this.mapping={};a&&ko.mapping.fromJS(a,this.mapping,this)}
+function Project(a){this.name=ko.observable(a.name);this.execCount=ko.observable(a.execCount||0);this.failedCount=ko.observable(a.failedCount||0);this.userCount=ko.observable(a.userCount||0);this.description=ko.observable(a.description);this.auth=ko.observable(new ProjectAuth);this.readme=ko.observable(new ProjectReadme);this.loaded=ko.observable(!1);this.mapping={auth:{create:function(a){return new ProjectAuth(a.data)}},readme:{create:function(a){return new ProjectReadme(a.data)}}};a&&ko.mapping.fromJS(a,
+this.mapping,this)};
